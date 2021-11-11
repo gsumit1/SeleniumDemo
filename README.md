@@ -1,1 +1,1 @@
-# SeleniumDemo
+# Selenium Training Code
