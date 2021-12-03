@@ -20,7 +20,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.apache.commons.io.FileUtils;
 
-public class screenprint {
+public class screenprint_12 {
 	public static void main(String arg[]) throws IOException, HeadlessException, AWTException {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Training-PPT\\Driver\\chromedriver.exe");

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class DragDrop {
+public class DragDrop_07 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
