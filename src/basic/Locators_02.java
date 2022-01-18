@@ -29,6 +29,9 @@ public class Locators_02 {
 		WebElement btn = driver.findElement(By.xpath("//button[@id='doubleClickBtn']"));
 		btn.click();
 		*/
+		
+		
+		
 		//TextBox
 		driver.get("https://demoqa.com/text-box");
 		driver.findElement(By.id("userEmail")).sendKeys("sumit@gmail.com");

@@ -4,28 +4,52 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BrowserNavigation_01 {
+	
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "C:\\Training-PPT\\Driver\\chromedriver.exe");
+		
+		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
+		
+		
+		
 		WebDriver driver= new ChromeDriver();
+		
 		//System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");
 		//WebDriver driver = new FirefoxDriver();
 		
-		driver.manage().window().maximize();		
+		
+	
+		
+		driver.manage().window().maximize();	
+		
 		driver.get("https://www.google.co.in/");
-		driver.navigate().forward();
-		driver.getCurrentUrl();
+		
+		//driver.navigate().to("https://www.google.co.in/");
+		
+
+		String url=driver.getCurrentUrl();
+		System.out.println(url);
+		
+		
+		//String pageSource=driver.getPageSource();
+		//System.out.println(pageSource);
 		
 		
 		
-		driver.navigate().to("");
-		driver.navigate().refresh();
-		driver.navigate().forward();
-		driver.navigate().back();
+		//driver.navigate().forward();
+		//driver.navigate().back();
 		
-		driver.getTitle();
 		
-		driver.close();
+		//driver.navigate().refresh();
+	
+		
+		
+		String title=driver.getTitle();
+		System.out.println(title);
+		
+		driver.close(); 
+		
 		driver.quit();
+		
 		
 	}
 }
