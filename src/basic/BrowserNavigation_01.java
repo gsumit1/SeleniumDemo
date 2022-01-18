@@ -7,10 +7,7 @@ public class BrowserNavigation_01 {
 	
 	public static void main(String[] args) {
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
-		
-		
-		
+		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");		
 		WebDriver driver= new ChromeDriver();
 		
 		//System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");
