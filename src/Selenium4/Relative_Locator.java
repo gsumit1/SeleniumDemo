@@ -18,13 +18,20 @@ public class Relative_Locator {
 		driver.manage().window().maximize();
 		driver.get("https://www.diemol.com/selenium-4-demo/relative-locators-demo.html");
 		
-		String s=getAbove().getAttribute("id");
+		
+		
+		
+		
+		
+		
+		
+		String s=getBelow().getAttribute("id");
 		System.out.println(s);
 		
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("window.scrollBy(0,250)");
+		//jse.executeScript("window.scrollBy(0,250)");
 
-		jse.executeScript("arguments[0].style.filter='blur(8px)'", getAbove());
+		jse.executeScript("arguments[0].style.filter='blur(8px)'", getBelow());
 
 		/*
 		//Different Example
@@ -38,7 +45,8 @@ public class Relative_Locator {
 	
 	
 	public static WebElement getBelow() {
-		return driver.findElement(with(By.tagName("li")).below(By.id("warsaw")));
+		
+		return driver.findElement(with(By.tagName("li")).below(By.id("london")));
 	}
 
 	public static WebElement getAbove() {
@@ -59,7 +67,7 @@ public class Relative_Locator {
 	}
 
 	public static WebElement getChainingLocators() {
-		return driver.findElement(with(By.tagName("li")).toLeftOf(By.id("berlin")).below(By.id("warsaw")));
+		return driver.findElement(with(By.tagName("li")).toLeftOf(By.id("berlin")).below(By.id("london")));
 	}
 
 }
