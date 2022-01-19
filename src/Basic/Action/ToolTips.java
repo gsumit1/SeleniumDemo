@@ -1,4 +1,4 @@
-package Basic;
+package Basic.Action;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,20 +8,20 @@ import org.openqa.selenium.interactions.Actions;
 
 public class ToolTips {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "C:\\Training-PPT\\Driver\\chromedriver.exe");
-		WebDriver driver= new ChromeDriver();
-	
-		driver.get("https://demoqa.com/tool-tips");
-		WebElement e=driver.findElement(By.xpath("//button[@id='toolTipButton']"));
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("https://jqueryui.com/resources/demos/tooltip/default.html");
 		
-		Actions act=new Actions(driver);
+		WebElement ele = driver.findElement(By.id("age"));
 		
-		
-		act.moveToElement(e).moveToElement(e).contextClick(e).build().perform();
-		
-		
+		Actions action = new Actions(driver);
+		action.moveToElement(ele).build().perform();
+		WebElement toolTipElement = driver.findElement(By.xpath("//*[@role='tooltip']/div"));
+		String toolTipTxt = toolTipElement.getText();
+
+		System.out.println(toolTipTxt);
 
 	}
 

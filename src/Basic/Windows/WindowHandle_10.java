@@ -1,4 +1,4 @@
-package Basic;
+package Basic.Windows;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WindowHandle_10 {
 
 	public static void main(String arg[]) {
-		System.setProperty("webdriver.chrome.driver", "C:\\Training-PPT\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",  "/Users/riyaanghosh/Downloads/chromedriver");
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://demoqa.com/browser-windows");

@@ -1,4 +1,4 @@
-package Basic;
+package Basic.Action;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ public class DragDrop_07 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "C:\\Training-PPT\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://demoqa.com/droppable/");
 		
@@ -21,7 +21,7 @@ public class DragDrop_07 {
 
 		WebElement to = driver.findElement(By.id("droppable"));
 
-		builder.dragAndDrop(from, to).build().perform();
+		builder.dragAndDrop(from, to).perform();
 
 	}
 

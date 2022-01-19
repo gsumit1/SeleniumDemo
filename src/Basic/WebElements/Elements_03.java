@@ -1,4 +1,4 @@
-package Basic;
+package Basic.WebElements;
 
 import java.util.List;
 

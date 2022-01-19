@@ -1,4 +1,4 @@
-package Basic;
+package Basic.Table;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ public class Table_11 {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Training-PPT\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.w3schools.com/html/html_tables.asp");
 
@@ -31,7 +31,7 @@ public class Table_11 {
 		}*/
 
 		
-		
+	
 		List<WebElement> columns1 = rows.get(0).findElements(By.tagName("th"));
 		
 		List<String> headers = new ArrayList<String>();
@@ -49,6 +49,8 @@ public class Table_11 {
 			System.out.print(columns.get(index).getText());
 			System.out.print("\n");
 		}
+		
+
 		
 	}
 

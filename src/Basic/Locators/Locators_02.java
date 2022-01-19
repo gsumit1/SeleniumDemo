@@ -1,4 +1,4 @@
-package Basic;
+package Basic.Locators;
 
 import java.util.List;
 
