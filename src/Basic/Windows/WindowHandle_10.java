@@ -10,11 +10,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WindowHandle_10 {
 
-	public static void main(String arg[]) {
+	public static void main(String arg[]) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",  "/Users/riyaanghosh/Downloads/chromedriver");
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://demoqa.com/browser-windows");
+		Thread.sleep(10000);
 		String s = driver.getWindowHandle();
 		
 		System.out.println(s);
@@ -40,7 +41,7 @@ public class WindowHandle_10 {
 		}
 		driver.switchTo().window(s);
 		System.out.println(driver.getCurrentUrl());
-
+	
 	}
 
 }

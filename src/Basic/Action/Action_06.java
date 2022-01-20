@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
 public class Action_06 {
@@ -17,13 +18,17 @@ public class Action_06 {
 		
 		
 		Actions action = new Actions(driver);
-
+		
+		
 		/*Double click */
 		action.doubleClick(doubleClickBtn).perform();
 		
 		//Right Click
 		WebElement rightClick = driver.findElement(By.id("rightClickBtn"));
-		action.contextClick(rightClick).perform();
+		Action a=action.contextClick(rightClick).build();
+		a.perform();
+		
+		//action.contextClick(rightClick).perform();
 		
 	}
 

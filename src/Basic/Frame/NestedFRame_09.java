@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class NestedFRame_09 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		/*
 		By Index
 		By Name or Id
@@ -16,6 +16,7 @@ public class NestedFRame_09 {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://demoqa.com/nestedframes");
 		
+Thread.sleep(10000);
 		
 		driver.switchTo().frame(driver.findElement(By.id("frame1")));
 		System.out.println(driver.findElement(By.tagName("body")).getText());

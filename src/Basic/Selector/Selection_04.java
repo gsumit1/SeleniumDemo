@@ -27,8 +27,8 @@ public class Selection_04 {
 			roundTrip.click();
 		}
 
-		WebElement oneWay = driver.findElement(By.xpath("//input[@value='oneway']"));
-		oneWay.click();
+		//WebElement oneWay = driver.findElement(By.xpath("//input[@value='oneway']"));
+		//oneWay.click();
 	}
 
 }

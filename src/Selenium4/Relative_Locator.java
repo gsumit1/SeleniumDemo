@@ -16,15 +16,9 @@ public class Relative_Locator {
 		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");		
 		driver= new ChromeDriver();		
 		driver.manage().window().maximize();
+		
+		/*
 		driver.get("https://www.diemol.com/selenium-4-demo/relative-locators-demo.html");
-		
-		
-		
-		
-		
-		
-		
-		
 		String s=getBelow().getAttribute("id");
 		System.out.println(s);
 		
@@ -32,13 +26,12 @@ public class Relative_Locator {
 		//jse.executeScript("window.scrollBy(0,250)");
 
 		jse.executeScript("arguments[0].style.filter='blur(8px)'", getBelow());
+		*/
 
-		/*
+		
 		//Different Example
 		driver.get("https://rally1.rallydev.com/slm/login.op");
 		driver.findElement(with(By.xpath("//input")).above(By.id("login-button"))).sendKeys("Hello");
-		*/
-		
 		Thread.sleep(10000);
 		
 	}

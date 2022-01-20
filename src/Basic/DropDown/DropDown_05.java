@@ -15,16 +15,21 @@ public class DropDown_05 {
 		
 		WebElement dropdown=driver.findElement(By.xpath("//select[@name='fromPort']"));
 		
-		/* UnexpectedTagNameException - when element is not a SELECT */
+
 		
+		
+		/* UnexpectedTagNameException - when element is not a SELECT */
+	
 		Select departDropDown =new Select(dropdown);
 		departDropDown.selectByVisibleText("London");
 		//departDropDown.selectByIndex(0);
 		//departDropDown.selectByValue("");
-		
-		
+		//departDropDown.deselectAll();
+
+		/*
 		driver.get("http://jsbin.com/osebed/2");
 		Select fruits = new Select(driver.findElement(By.id("fruits")));
+			
 		System.out.println(fruits.isMultiple());
 		
 		
@@ -33,7 +38,7 @@ public class DropDown_05 {
 		
 		Thread.sleep(3000);
 		fruits.deselectAll();
-	
+		*/
 	}
 
 }
