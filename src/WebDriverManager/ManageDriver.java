@@ -10,6 +10,9 @@ public class ManageDriver {
 			
 		WebDriverManager.chromedriver().setup();
 		
+		//System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
+		
+		
 		//WebDriverManager.chromedriver().driverVersion("81.0.4044.138").setup();
 		//WebDriverManager.firefoxdriver().browserVersion("75").setup();
 

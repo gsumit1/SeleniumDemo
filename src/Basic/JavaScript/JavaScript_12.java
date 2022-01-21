@@ -11,21 +11,22 @@ public class JavaScript_12 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Training-PPT\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("http://demo.guru99.com/test/newtours/register.php");
 
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		//jse.executeScript("window.scrollBy(0,250)");
+		jse.executeScript("window.scrollBy(0,250)");
 
-		WebElement element = driver.findElement(By.xpath("//input[@name='submit']"));
-		
-		
 		//jse.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+		
+		
+		
+		WebElement element = driver.findElement(By.xpath("//input[@name='submit']"));
 		jse.executeScript("arguments[0].click();", element);
 		
-        String url = jse.executeScript("return document.URL;").toString();
+        //String url = jse.executeScript("return document.URL;").toString();
 		//String TitleName = js.executeScript("return document.title;").toString();			
 
 

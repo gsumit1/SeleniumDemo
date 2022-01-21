@@ -20,8 +20,8 @@ public class TimeOut {
 		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
 		driver = new ChromeDriver();
 		
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		driver.get("http://somedomain/slow_loading_url");
 		WebElement dynamicElement = driver.findElement(By.id("dynamicElement"));
@@ -31,9 +31,13 @@ public class TimeOut {
 
 		driver.get("http://somedomain/someurl");
 		//WebDriverWait wait = new WebDriverWait(driver, 30);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(12));
+		
+		
+		wait.until(ExpectedConditions.visibilityOf(dynamicElement)).click();
+		
 		WebElement dynamicElement1 = wait
-		.until(ExpectedConditions.presenceOfElementLocated(By.id("dynamicElement")));
+	.until(ExpectedConditions.presenceOfElementLocated(By.id("dynamicElement")));
 
 	}
 
