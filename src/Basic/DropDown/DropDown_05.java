@@ -14,10 +14,6 @@ public class DropDown_05 {
 		driver.get("http://demo.guru99.com/test/newtours/reservation.php");
 		
 		WebElement dropdown=driver.findElement(By.xpath("//select[@name='fromPort']"));
-		
-
-		
-		
 		/* UnexpectedTagNameException - when element is not a SELECT */
 	
 		Select departDropDown =new Select(dropdown);
@@ -31,7 +27,6 @@ public class DropDown_05 {
 		Select fruits = new Select(driver.findElement(By.id("fruits")));
 			
 		System.out.println(fruits.isMultiple());
-		
 		
 		fruits.selectByVisibleText("Banana");
 		fruits.selectByIndex(1);
