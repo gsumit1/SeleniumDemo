@@ -27,7 +27,6 @@ public class DropDown_05 {
 		Select fruits = new Select(driver.findElement(By.id("fruits")));
 			
 		System.out.println(fruits.isMultiple());
-		
 		fruits.selectByVisibleText("Banana");
 		fruits.selectByIndex(1);
 		
