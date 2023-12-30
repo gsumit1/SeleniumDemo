@@ -11,25 +11,23 @@ public class Action_06 {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
-		WebDriver driver= new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://demoqa.com/buttons");
-		
+
 		WebElement doubleClickBtn = driver.findElement(By.xpath("//button[@id='doubleClickBtn']"));
-		
-		
+
 		Actions action = new Actions(driver);
-		
-		
-		/*Double click */
+
+		/* Double click */
 		action.doubleClick(doubleClickBtn).perform();
-		
-		//Right Click
+
+		// Right Click
 		WebElement rightClick = driver.findElement(By.id("rightClickBtn"));
-		Action a=action.contextClick(rightClick).build();
-		a.perform();
-		
-		//action.contextClick(rightClick).perform();
-		
+		// Action a=action.contextClick(rightClick).build();
+		// a.perform();
+
+		action.contextClick(rightClick).perform();
+
 	}
 
 }

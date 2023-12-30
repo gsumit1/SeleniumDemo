@@ -25,7 +25,8 @@ public class Elements_03 {
 
 		System.out.println(e.get(0).getAttribute("placeholder"));
 		System.out.println(e.get(0).getTagName());
-
+		
+		System.out.println(e.get(1).getAttribute("value"));
 		
 		System.out.println(e.get(0).getText());
 		

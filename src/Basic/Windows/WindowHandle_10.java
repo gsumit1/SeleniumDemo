@@ -15,6 +15,7 @@ public class WindowHandle_10 {
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://demoqa.com/browser-windows");
+		
 		Thread.sleep(10000);
 		String s = driver.getWindowHandle();
 		
@@ -37,11 +38,12 @@ public class WindowHandle_10 {
 				System.out.println(p);
 				driver.switchTo().window(p);
 				System.out.println(driver.getCurrentUrl());
+				driver.close();
 			}
 		}
 		driver.switchTo().window(s);
 		System.out.println(driver.getCurrentUrl());
-	
+		
 	}
 
 }

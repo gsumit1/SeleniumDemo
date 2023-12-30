@@ -12,33 +12,32 @@ public class DropDown_05 {
 		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://demo.guru99.com/test/newtours/reservation.php");
-		
-		WebElement dropdown=driver.findElement(By.xpath("//select[@name='fromPort']"));
-		
 
-		
-		
+		WebElement dropdown = driver.findElement(By.xpath("//select[@name='fromPort']"));
+
+		dropdown.sendKeys("London");
+
 		/* UnexpectedTagNameException - when element is not a SELECT */
-	
-		Select departDropDown =new Select(dropdown);
-		departDropDown.selectByVisibleText("London");
-		//departDropDown.selectByIndex(0);
-		//departDropDown.selectByValue("");
-		//departDropDown.deselectAll();
-
 		/*
+		 * Select departDropDown =new Select(dropdown);
+		 * 
+		 * departDropDown.selectByVisibleText("London");
+		 * //departDropDown.selectByIndex(0); //departDropDown.selectByValue("");
+		 * //departDropDown.deselectAll();
+		 * 
+		 */
 		driver.get("http://jsbin.com/osebed/2");
 		Select fruits = new Select(driver.findElement(By.id("fruits")));
-			
+
 		System.out.println(fruits.isMultiple());
-		
-		
+
 		fruits.selectByVisibleText("Banana");
-		fruits.selectByIndex(1);
-		
+		fruits.selectByVisibleText("Apple");
+		// fruits.selectByIndex(1);
+
 		Thread.sleep(3000);
 		fruits.deselectAll();
-		*/
+
 	}
 
 }

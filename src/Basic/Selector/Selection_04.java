@@ -15,7 +15,15 @@ public class Selection_04 {
 		driver.manage().window().maximize();
 		// Thread.sleep(5000);
 		WebElement roundTrip = driver.findElement(By.xpath("//input[@value='roundtrip']"));
-
+		
+		//Element is not present in DOM
+		WebElement roundTrip1 = driver.findElement(By.xpath("//*[@id=\"static-ad-1\"]"));
+		
+		System.out.println(roundTrip1.isDisplayed());
+		
+		
+		//System.out.println(driver.findElement(By.xpath("//input[@value='roundtrip1']")).isDisplayed());
+		
 		/*
 		 * isSelected() Determine whether or not this element is selected or not.
 		 * isDisplayed()Is this element displayed or not? isEnabled() True if the
@@ -23,6 +31,8 @@ public class Selection_04 {
 		 */
 
 		boolean flag = roundTrip.isSelected();
+		
+		
 		if (!flag) {
 			roundTrip.click();
 		}

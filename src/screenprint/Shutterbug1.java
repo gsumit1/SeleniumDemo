@@ -10,7 +10,7 @@ public class Shutterbug1 {
 
 	public static void main(String arg[]) {
 		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
-			WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://github.com/pazone/ashot");
 
