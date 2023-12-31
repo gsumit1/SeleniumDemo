@@ -12,7 +12,6 @@ public class DropDown_05 {
 		System.setProperty("webdriver.chrome.driver", "/Users/riyaanghosh/Downloads/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://demo.guru99.com/test/newtours/reservation.php");
-
 		WebElement dropdown = driver.findElement(By.xpath("//select[@name='fromPort']"));
 
 		dropdown.sendKeys("London");
@@ -30,7 +29,6 @@ public class DropDown_05 {
 		Select fruits = new Select(driver.findElement(By.id("fruits")));
 
 		System.out.println(fruits.isMultiple());
-
 		fruits.selectByVisibleText("Banana");
 		fruits.selectByVisibleText("Apple");
 		// fruits.selectByIndex(1);
